@@ -2,6 +2,7 @@ import React from "react";
 import useAppData from "../Hooks/useAppData";
 import Container from "../components/Container/Container";
 import AppCard from "../components/AppCard/AppCard";
+import { Link } from "react-router";
 
 const TrendingApps = () => {
   const { appData } = useAppData();
@@ -22,6 +23,9 @@ const TrendingApps = () => {
                 {
                     trendData.map(app=> <AppCard key={app.id} app={app}></AppCard>)
                 }
+          </div>
+          <div className="py-10 flex justify-center">
+             <Link to="/allapp" className="btn"> See All</Link>
           </div>
         </div>
     

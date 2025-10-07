@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router";
+
 
 const AppCard = ({app}) => {
   const { title,ratingAvg,downloads } = app;
   return (
-    <div>
+    <Link to='/appdetails'>
       <div className="w-60 h-72 bg-white border rounded-lg p-3">
         <div className="bg-gray-400 w-full h-[70%] rounded-lg">
-          <img src='' alt="" />
         </div>
         <div className="my-4 space-y-2">
           <div>
@@ -18,7 +19,7 @@ const AppCard = ({app}) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
