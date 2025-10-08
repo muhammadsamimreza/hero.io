@@ -23,4 +23,4 @@ const deleteLocalStorage = (id) => {
   localStorage.setItem("appId", JSON.stringify(updatedId));
 };
 
-export default {getFromLocalStorage, addToLocalStorage, deleteLocalStorage  }
+export {getFromLocalStorage, addToLocalStorage, deleteLocalStorage  }

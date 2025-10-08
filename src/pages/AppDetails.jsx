@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import useAppData from "../Hooks/useAppData";
 import Container from "../components/Container/Container";
@@ -16,9 +16,15 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import {
+  addToLocalStorage,
+  getFromLocalStorage,
+} from "../Utilities/AddToLocalStorage";
+
 const AppDetails = () => {
   const { id } = useParams();
   const { appData } = useAppData();
+  const [installed, setInstalled] = useState(false);
   const appId = Number(id);
 
   const data = appData.find((data) => data.id === appId) || {};
@@ -31,9 +37,20 @@ const AppDetails = () => {
     reviews,
     companyName,
     description,
+    size,
   } = data;
   const chartData = data.ratings;
-  console.log(chartData);
+
+  useEffect(() => {
+    const savedApps = getFromLocalStorage().map(Number);
+    setInstalled(savedApps.includes(appId));
+  }, [appId]);
+
+  // Handle install button click
+  const handleInstall = () => {
+    addToLocalStorage(appId);
+    setInstalled(true);
+  };
 
   return (
     <div>
@@ -91,8 +108,17 @@ const AppDetails = () => {
               </div>
             </div>
             <div>
-              <button className="btn bg-teal-400 text-white font-semibold">
-                Instal Now
+              <button
+                onClick={() => handleInstall(id)}
+                disabled={installed} // disable if installed
+                className={`btn font-semibold ${
+                  installed
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-teal-400 text-white"
+                }`}
+              >
+                {installed ? "Installed" : "Install Now"}{" "}
+                <span>({size} MB)</span>
               </button>
             </div>
           </div>
