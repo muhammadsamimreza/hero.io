@@ -5,7 +5,7 @@ import Container from "../components/Container/Container";
 import downlowdIcon from "../assets/icon-downloads.png";
 import ratingsIcon from "../assets/icon-ratings.png";
 import reviewIcon from "../assets/icon-review.png";
-
+import { Bar, BarChart, CartesianGrid, Legend, Rectangle, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 const AppDetails = () => {
   const { id } = useParams();
   const { appData } = useAppData();
@@ -13,11 +13,19 @@ const AppDetails = () => {
 
   const data = appData.find((data) => data.id === appId) || {};
 
-  const {title, image, ratingAvg,downloads,reviews} = data;
- 
-  
-  
+  const {
+    title,
+    image,
+    ratingAvg,
+    downloads,
+    reviews,
+    companyName,
+    description,
+  } = data;
+ const chartData = data.ratings
+ console.log(chartData)
 
+ 
   return (
     <div>
       <Container>
@@ -30,7 +38,10 @@ const AppDetails = () => {
               <h1 className="text-3xl font-bold">{title}</h1>
               <p className="text-xl ">
                 <span className="text-gray-400">Develop by:</span>
-                <span className="font-medium bg-[linear-gradient(125.07deg,_rgba(99,46,227,1),_rgba(159,98,242,1)_100%)] text-transparent bg-clip-text"> Epic Planner</span>
+                <span className="font-medium bg-[linear-gradient(125.07deg,_rgba(99,46,227,1),_rgba(159,98,242,1)_100%)] text-transparent bg-clip-text">
+                  {" "}
+                  {companyName}
+                </span>
               </p>
             </div>
             <div className="flex items-center gap-12">
@@ -62,6 +73,41 @@ const AppDetails = () => {
               </button>
             </div>
           </div>
+        </div>
+        <div>
+          <h1 className="text-xl font-bold my-3">Description</h1>
+          <p className="text-justify">{description}</p>
+        </div>
+
+        <div className="my-20">
+          {
+            <div className="w-3/4 mx-auto h-80 my-20">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart
+                  layout="vertical"
+                  data={chartData}
+                  margin={{
+                    top: 5,
+                    right: 30,
+                    left: 20,
+                    bottom: 5,
+                  }}
+                >
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <YAxis dataKey="name" type="category" />  
+                  <XAxis type="number" />   
+                  <Tooltip />
+                  <Legend />
+                  <Bar
+                    dataKey="count"
+                    fill="#8884d8"
+                    barSize={30}
+                    activeBar={<Rectangle fill="pink" stroke="blue" />}
+                  />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          }
         </div>
       </Container>
     </div>
