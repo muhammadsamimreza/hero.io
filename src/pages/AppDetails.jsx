@@ -20,6 +20,7 @@ import {
   addToLocalStorage,
   getFromLocalStorage,
 } from "../Utilities/AddToLocalStorage";
+import AppErrorPage from "./AppErrorPage";
 
 const AppDetails = () => {
   const { id } = useParams();
@@ -27,8 +28,23 @@ const AppDetails = () => {
   const [installed, setInstalled] = useState(false);
   const appId = Number(id);
 
-  const data = appData.find((data) => data.id === appId) || {};
+  useEffect(() => {
+    const savedApps = getFromLocalStorage() || [];
+    setInstalled(savedApps.map(Number).includes(appId));
+  }, [appId]);
 
+  if (!appData || appData.length === 0) {
+    return (
+      <div className="text-center py-20">
+        <h1 className="text-xl font-semibold text-gray-500">Loading...</h1>
+      </div>
+    );
+  }
+
+  const data = appData.find((data) => data.id === appId);
+  if (!data) {
+    return <AppErrorPage />;
+  }
   const {
     title,
     image,
@@ -41,12 +57,6 @@ const AppDetails = () => {
   } = data;
   const chartData = data.ratings;
 
-  useEffect(() => {
-    const savedApps = getFromLocalStorage().map(Number);
-    setInstalled(savedApps.includes(appId));
-  }, [appId]);
-
-  // Handle install button click
   const handleInstall = () => {
     addToLocalStorage(appId);
     setInstalled(true);
@@ -77,7 +87,7 @@ const AppDetails = () => {
             <div className="flex items-center gap-12">
               <div className="flex flex-col">
                 <img className="w-5 md:w-7" src={downlowdIcon} alt="" />
-                <div iv className="my-2">
+                <div className="my-2">
                   <p className="text-[#7f8488] text-xs md:text-sm">Download</p>
                   <h1 className="text-xl md:text-[27px] font-bold">
                     {downloads}
@@ -110,7 +120,7 @@ const AppDetails = () => {
             <div>
               <button
                 onClick={() => handleInstall(id)}
-                disabled={installed} // disable if installed
+                disabled={installed}
                 className={`btn font-semibold ${
                   installed
                     ? "bg-gray-400 cursor-not-allowed"
