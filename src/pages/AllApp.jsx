@@ -1,10 +1,19 @@
-import React from "react";
+import React, {  useState } from "react";
 import AppCard from "../components/AppCard/AppCard";
 import useAppData from "../Hooks/useAppData";
 import Container from "../components/Container/Container";
 
 const AllApp = () => {
   const { appData } = useAppData();
+  const [search, setSearch] = useState('')
+  const trimSearch = search.trim().toLowerCase()
+
+ const fillterdeApp = search ? (appData.filter(app=> 
+      app.title.trim().toLowerCase().includes(trimSearch)))
+      : appData ;
+    
+  
+ 
   return (
     <div>
       <Container className="">
@@ -15,9 +24,9 @@ const AllApp = () => {
           </p>
         </div>
         <div className="my-8 px-3 flex justify-between items-center">
-          <div className="text-xl font-semibold"><p>({appData.length}) App Founded</p></div>
+          <div className="text-xl font-semibold"><p>({fillterdeApp.length}) App Founded</p></div>
           <div>
-            <label className="input">
+            <label value={search} onChange={(e)=> setSearch(e.target.value)} className="input">
               <svg
                 className="h-[1em] opacity-50"
                 xmlns="http://www.w3.org/2000/svg"
@@ -34,12 +43,12 @@ const AllApp = () => {
                   <path d="m21 21-4.3-4.3"></path>
                 </g>
               </svg>
-              <input type="search" required placeholder="Search" />
+              <input  type="search" required placeholder="Search" />
             </label>
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-items-center">
-          {appData.map((app) => (
+          {fillterdeApp.map((app) => (
             <AppCard key={app.id} app={app}></AppCard>
           ))}
         </div>
