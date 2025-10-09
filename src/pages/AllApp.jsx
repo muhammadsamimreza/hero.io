@@ -48,10 +48,16 @@ const AllApp = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-items-center">
-          {fillterdeApp.map((app) => (
-            <AppCard key={app.id} app={app}></AppCard>
-          ))}
         </div>
+          { fillterdeApp.length === 0 ? (
+            <div className="flex justify-center text-gray-500 py-20 text-xl font-semibold">
+            <h1 className="w-64 mx-auto text-center">No App Found</h1>
+          </div>
+          ): (<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 justify-items-center">
+            {fillterdeApp.map((app) => (
+              <AppCard key={app.id} app={app} />
+            ))}
+          </div>)}
       </Container>
     </div>
   );
