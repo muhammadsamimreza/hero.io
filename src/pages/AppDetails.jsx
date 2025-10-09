@@ -96,7 +96,7 @@ const AppDetails = () => {
               </div>
               <div className="flex flex-col">
                 <img className="w-5 md:w-7" src={ratingsIcon} alt="" />
-                <div iv className="my-2">
+                <div className="my-2">
                   <p className="text-[#7f8488] text-xs md:text-sm">
                     Average Ratings
                   </p>
@@ -107,7 +107,7 @@ const AppDetails = () => {
               </div>
               <div className="flex flex-col">
                 <img className="w-5 md:w-7" src={reviewIcon} alt="" />
-                <div iv className="my-2">
+                <div className="my-2">
                   <p className="text-[#7f8488] text-xs md:text-sm">
                     Total Review
                   </p>

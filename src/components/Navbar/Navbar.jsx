@@ -2,6 +2,7 @@ import React from "react";
 import Container from "../Container/Container";
 import { Link, NavLink } from "react-router";
 import { FaGithub } from "react-icons/fa";
+import logo from "../../assets/logo.png"
 
 const Navbar = () => {
   return (
@@ -46,7 +47,15 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <a className="text-xl font-bold bg-[linear-gradient(125.07deg,_rgba(99,46,227,1),_rgba(159,98,242,1)_100%)] text-transparent bg-clip-text ">HERO.IO</a>
+            <div className="flex gap-2 items-center">
+              <img className="w-6 h-6" src={logo} alt="" />
+              <Link
+              to="/"
+              className="text-xl font-bold bg-[linear-gradient(125.07deg,_rgba(99,46,227,1),_rgba(159,98,242,1)_100%)] text-transparent bg-clip-text "
+            >
+              HERO.IO
+            </Link>
+            </div>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
@@ -62,8 +71,14 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="navbar-end">
-            <Link to='https://github.com/muhammadsamimreza' className="btn text-white bg-[linear-gradient(125.07deg,_rgba(99,46,227,1),_rgba(159,98,242,1)_100%)]">
-             <span><FaGithub></FaGithub> </span> Contribute
+            <Link
+              to="https://github.com/muhammadsamimreza"
+              className="btn text-white bg-[linear-gradient(125.07deg,_rgba(99,46,227,1),_rgba(159,98,242,1)_100%)]"
+            >
+              <span>
+                <FaGithub></FaGithub>{" "}
+              </span>{" "}
+              Contribute
             </Link>
           </div>
         </div>
