@@ -12,7 +12,7 @@ const InstalledCard = ({ app,onUninstall }) => {
  const handleUninstall = (id) =>{
       onUninstall(id)
       deleteLocalStorage(id)
-      toast("Your App Uninstalled")
+      toast(<h1 className="text-red-400">Succesfully Uninstalled</h1>)
  }
   return (
     <div>

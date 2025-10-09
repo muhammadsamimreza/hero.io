@@ -21,6 +21,7 @@ import {
   getFromLocalStorage,
 } from "../Utilities/AddToLocalStorage";
 import AppErrorPage from "./AppErrorPage";
+import { toast } from "react-toastify";
 
 const AppDetails = () => {
   const { id } = useParams();
@@ -60,6 +61,7 @@ const AppDetails = () => {
   const handleInstall = () => {
     addToLocalStorage(appId);
     setInstalled(true);
+    toast(<h1 className="text-green-500 font-semibold">Succesfully Installed</h1>)
   };
 
   return (
