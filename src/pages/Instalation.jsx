@@ -4,6 +4,7 @@ import { getFromLocalStorage } from "../Utilities/AddToLocalStorage";
 import useAppData from "../Hooks/useAppData";
 import InstalledCard from "./InstalledCard";
 
+
 const Instalation = () => {
   const { appData } = useAppData();
   const [installedApp, setInstalledApp] = useState([]);

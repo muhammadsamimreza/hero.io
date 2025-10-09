@@ -3,6 +3,8 @@ import Container from "../components/Container/Container";
 import downlowdIcon from "../assets/icon-downloads.png";
 import ratingsIcon from "../assets/icon-ratings.png";
 import { deleteLocalStorage } from "../Utilities/AddToLocalStorage";
+import { toast } from 'react-toastify';
+
 const InstalledCard = ({ app,onUninstall }) => {
   console.log(app);
 
@@ -10,6 +12,7 @@ const InstalledCard = ({ app,onUninstall }) => {
  const handleUninstall = (id) =>{
       onUninstall(id)
       deleteLocalStorage(id)
+      toast("Your App Uninstalled")
  }
   return (
     <div>
