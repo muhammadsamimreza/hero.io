@@ -44,7 +44,7 @@ const HeroSection = () => {
             <h1 className="text-3xl font-bold text-center text-white">
               Trusted by Millions, Built for You
             </h1>
-            <div className="flex justify-around items-center">
+            <div className="flex flex-col md:flex-row justify-around items-center space-y-7 md:space-y-0">
               <div className="flex justify-center ">
                 <div className="space-y-2 text-white pb-5 text-center">
                   <p className="text-base-100">Total Downloads</p>

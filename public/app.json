@@ -1,20 +1,20 @@
 [
   {
-    "image": "https://i.ibb.co.com/KjrfnHpx/Epic.png",
-    "title": "Epic Planner",
-    "companyName": "Info Studios",
+    "image": "https://i.ibb.co.com/dJJnp8B8/buddy.jpg",
+    "title": "Budget Buddy",
+    "companyName": "FinancePro",
     "id": 1,
-    "description": "Epic Planner is built to streamline your day with ease and precision. Whether you’re managing work, personal tasks, or long-term goals, this intuitive planner keeps everything organized. The user interface is minimal yet powerful, designed for effortless navigation. It supports recurring tasks, color-coded labels, reminders, and syncing across devices. Perfect for busy professionals or students, it ensures no appointment or deadline is missed. Epic Planner adapts to your schedule and simplifies productivity through smart design choices. Stay ahead with better planning and a tool that understands your workflow.",
-    "size": 433,
-    "reviews": 19287,
-    "ratingAvg": 3.12,
-    "downloads": "6M",
+    "description": "Budget Buddy makes managing your finances simple and stress-free. Track expenses, create budgets, and set savings goals with an intuitive dashboard. The app offers reminders for bill payments, visual spending reports, and bank account syncing for real-time updates. Whether you want to get out of debt or save for a big purchase, Budget Buddy gives you the tools to take control of your money.",
+    "size": 110,
+    "reviews": 23040,
+    "ratingAvg": 4.33,
+    "downloads": "4.5M",
     "ratings": [
-      { "name": "1 star", "count": 3972 },
-      { "name": "2 star", "count": 3263 },
-      { "name": "3 star", "count": 4319 },
-      { "name": "4 star", "count": 3843 },
-      { "name": "5 star", "count": 3890 }
+      { "name": "1 star", "count": 870 },
+      { "name": "2 star", "count": 900 },
+      { "name": "3 star", "count": 5375 },
+      { "name": "4 star", "count": 7025 },
+      { "name": "5 star", "count": 6865 }
     ]
   },
   {
@@ -432,21 +432,21 @@
     ]
   },
   {
-    "image": "https://i.ibb.co.com/dJJnp8B8/buddy.jpg",
-    "title": "Budget Buddy",
-    "companyName": "FinancePro",
+    "image": "https://i.ibb.co.com/KjrfnHpx/Epic.png",
+    "title": "Epic Planner",
+    "companyName": "Info Studios",
     "id": 25,
-    "description": "Budget Buddy makes managing your finances simple and stress-free. Track expenses, create budgets, and set savings goals with an intuitive dashboard. The app offers reminders for bill payments, visual spending reports, and bank account syncing for real-time updates. Whether you want to get out of debt or save for a big purchase, Budget Buddy gives you the tools to take control of your money.",
-    "size": 110,
-    "reviews": 23040,
-    "ratingAvg": 4.33,
-    "downloads": "4.5M",
+    "description": "Epic Planner is built to streamline your day with ease and precision. Whether you’re managing work, personal tasks, or long-term goals, this intuitive planner keeps everything organized. The user interface is minimal yet powerful, designed for effortless navigation. It supports recurring tasks, color-coded labels, reminders, and syncing across devices. Perfect for busy professionals or students, it ensures no appointment or deadline is missed. Epic Planner adapts to your schedule and simplifies productivity through smart design choices. Stay ahead with better planning and a tool that understands your workflow.",
+    "size": 433,
+    "reviews": 19287,
+    "ratingAvg": 3.12,
+    "downloads": "6M",
     "ratings": [
-      { "name": "1 star", "count": 870 },
-      { "name": "2 star", "count": 900 },
-      { "name": "3 star", "count": 5375 },
-      { "name": "4 star", "count": 7025 },
-      { "name": "5 star", "count": 6865 }
+      { "name": "1 star", "count": 3972 },
+      { "name": "2 star", "count": 3263 },
+      { "name": "3 star", "count": 4319 },
+      { "name": "4 star", "count": 3843 },
+      { "name": "5 star", "count": 3890 }
     ]
   }
 

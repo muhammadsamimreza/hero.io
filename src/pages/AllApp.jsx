@@ -15,7 +15,7 @@ const AllApp = () => {
   
  
   return (
-    <div>
+    <div className="bg-[#e9e9e9]">
       <Container className="">
         <div className="text-center space-y-3 py-10">
           <h1 className="text-3xl font-bold ">Our All Applications</h1>
