@@ -20,7 +20,7 @@ import {
   addToLocalStorage,
   getFromLocalStorage,
 } from "../Utilities/AddToLocalStorage";
-import AppErrorPage from "./AppErrorPage";
+import AppErrorPage from "../pages/AppErrorPage";
 import { toast } from "react-toastify";
 
 const AppDetails = () => {
