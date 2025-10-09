@@ -19,7 +19,7 @@ const InstalledCard = ({ app,onUninstall }) => {
       <Container>
         <div className="flex justify-between items-center my-5 bg-white p-5 rounded-2xl">
           <div className="flex gap-10 items-center">
-            <div className="w-30 h-32 bg-gray-300 rounded-2xl">
+            <div className="w-32 h-36 bg-gray-300 rounded-2xl p-3">
               <img
                 className="w-full h-full object-cover rounded-2xl"
                 src={image}

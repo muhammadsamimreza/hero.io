@@ -15,17 +15,17 @@ const AllApp = () => {
   
  
   return (
-    <div className="bg-[#e9e9e9]">
+    <div className="bg-[#e9e9e9] pb-20">
       <Container className="">
-        <div className="text-center space-y-3 py-10">
-          <h1 className="text-3xl font-bold ">Our All Applications</h1>
-          <p className="text-[#627382]">
+        <div className="text-center space-y-3 pt-5 md:py-10">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold ">Our All Applications</h1>
+          <p className="w-[70%] md:w-full mx-auto text-[#627382] text-sm md:text-[16px]">
             Explore All Apps on the Market developed by us. We code for Millions
           </p>
         </div>
-        <div className="my-8 px-3 flex justify-between items-center">
-          <div className="text-xl font-semibold"><p>({fillterdeApp.length}) App Founded</p></div>
-          <div>
+        <div className="mt-4 md:mt-0 md:my-8 px-3 flex flex-col-reverse md:flex-row justify-between items-center">
+          <div className=" text-xl font-semibold mb-7 md:mb-0"><p>({fillterdeApp.length}) App Founded</p></div>
+          <div className="mb-4 mt-5 md:mt-0 md:mb-0">
             <label value={search} onChange={(e)=> setSearch(e.target.value)} className="input">
               <svg
                 className="h-[1em] opacity-50"
