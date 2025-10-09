@@ -1,12 +1,21 @@
-import React, {  useState } from "react";
+import React, {  useEffect, useState } from "react";
 import AppCard from "../components/AppCard/AppCard";
 import useAppData from "../Hooks/useAppData";
 import Container from "../components/Container/Container";
+import Loader from "./Loading";
 
 const AllApp = () => {
   const { appData } = useAppData();
   const [search, setSearch] = useState('')
   const trimSearch = search.trim().toLowerCase()
+  const [isLoading, setIsLoading] = useState(true);
+  
+    useEffect(() => {
+      const time = setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+      return () => clearTimeout(time);
+    }, []);
 
  const fillterdeApp = search ? (appData.filter(app=> 
       app.title.trim().toLowerCase().includes(trimSearch)))
@@ -16,7 +25,10 @@ const AllApp = () => {
  
   return (
     <div className="bg-[#e9e9e9] pb-20">
-      <Container className="">
+       {
+        isLoading && <Loader></Loader>
+      }
+      <Container className={`transition-opacity duration-500 ${isLoading ? "opacity-0" : "opacity-100"}`}>
         <div className="text-center space-y-3 pt-5 md:py-10">
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold ">Our All Applications</h1>
           <p className="w-[70%] md:w-full mx-auto text-[#627382] text-sm md:text-[16px]">

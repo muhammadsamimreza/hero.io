@@ -3,11 +3,21 @@ import Container from "../components/Container/Container";
 import { getFromLocalStorage } from "../Utilities/AddToLocalStorage";
 import useAppData from "../Hooks/useAppData";
 import InstalledCard from "./InstalledCard";
+import Loader from "./Loading";
 
 const Instalation = () => {
   const { appData } = useAppData();
   const [installedApp, setInstalledApp] = useState([]);
   const [sort, setSort] = useState("none");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const time = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    return () => clearTimeout(time);
+  }, []);
+
 
   useEffect(() => {
     const savedAppLocal = getFromLocalStorage() || [];
@@ -45,8 +55,11 @@ const Instalation = () => {
     setInstalledApp((prev) => prev.filter((app) => app.id !== id));
   };
   return (
-    <div className="bg-[#e9e9e9] pb-20">
-      <Container>
+    <div className="bg-[#e9e9e9] pb-20 relative">
+      {
+        isLoading && <Loader></Loader>
+      }
+      <Container className={`transition-opacity duration-500 ${isLoading ? "opacity-0" : "opacity-100"}`}>
         <div className="md:py-10">
           <div className="text-center space-y-3 pt-5 md:py-10">
             <h1 className="text-xl sm:text-2xl md:text-3xl font-bold ">
