@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <div className="bg-base-100 shadow-sm">
       <Container>
-        <div className="navbar ">
+        <div className="navbar">
           <div className="navbar-start">
             <div className="dropdown">
               <div

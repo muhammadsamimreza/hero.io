@@ -45,7 +45,7 @@ const Instalation = () => {
     setInstalledApp((prev) => prev.filter((app) => app.id !== id));
   };
   return (
-    <div className="bg-[#e9e9e9] min-h-screen">
+    <div className="bg-[#e9e9e9] pb-20">
       <Container>
         <div className="py-10">
           <div className="py-5 space-y-2">
