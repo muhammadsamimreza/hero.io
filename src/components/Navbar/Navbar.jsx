@@ -66,7 +66,7 @@ const Navbar = () => {
                 <NavLink to="/allapp">App</NavLink>
               </li>
               <li>
-                <NavLink to="/instalation">Instalation</NavLink>
+                <NavLink to="/instalation">My Instalation</NavLink>
               </li>
             </ul>
           </div>
