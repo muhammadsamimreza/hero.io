@@ -4,7 +4,6 @@ import { getFromLocalStorage } from "../Utilities/AddToLocalStorage";
 import useAppData from "../Hooks/useAppData";
 import InstalledCard from "./InstalledCard";
 
-
 const Instalation = () => {
   const { appData } = useAppData();
   const [installedApp, setInstalledApp] = useState([]);
@@ -48,19 +47,19 @@ const Instalation = () => {
   return (
     <div className="bg-[#e9e9e9] pb-20">
       <Container>
-        <div className="py-10">
-          <div className="py-5 space-y-2">
-            <h1 className="text-3xl font-bold text-center">
-              All Instaled Apps
+        <div className="md:py-10">
+          <div className="text-center space-y-3 pt-5 md:py-10">
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold ">
+              All Installed Apps
             </h1>
-            <p className="text-center">
-              Explore All Trending Apps on the Market developed by us
+            <p className="w-[70%] md:w-full mx-auto text-[#627382] text-sm md:text-[16px]">
+              Explore All Apps on the Market developed by us.
             </p>
           </div>
           <div>
-            <div className="my-8 px-3 flex justify-between items-center">
-              <div className="text-xl font-semibold">
-                <p>({installedApp.length}) App Founded</p>
+            <div className="my-3 md:my-8 px-3 flex justify-between items-center">
+              <div className="md:text-xl font-semibold">
+                <p>Installed Apps ({installedApp.length})</p>
               </div>
               <div>
                 <details className="dropdown">

@@ -3,54 +3,58 @@ import Container from "../components/Container/Container";
 import downlowdIcon from "../assets/icon-downloads.png";
 import ratingsIcon from "../assets/icon-ratings.png";
 import { deleteLocalStorage } from "../Utilities/AddToLocalStorage";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
-const InstalledCard = ({ app,onUninstall }) => {
+const InstalledCard = ({ app, onUninstall }) => {
   console.log(app);
 
   const { title, image, ratingAvg, downloads, size, id } = app;
- const handleUninstall = (id) =>{
-      onUninstall(id)
-      deleteLocalStorage(id)
-      toast(<h1 className="text-red-400">Succesfully Uninstalled</h1>)
- }
+  const handleUninstall = (id) => {
+    onUninstall(id);
+    deleteLocalStorage(id);
+    toast(<h1 className="text-red-400">Succesfully Uninstalled</h1>);
+  };
   return (
     <div>
       <Container>
-        <div className="flex justify-between items-center my-5 bg-white p-5 rounded-2xl">
-          <div className="flex gap-10 items-center">
-            <div className="w-32 h-36 bg-gray-300 rounded-2xl p-3">
+        <div className="my-5 bg-white p-5 rounded-2xl">
+          <div className="flex justify-between items-center gap-7 md:gap-0">
+            <div className="w-24 md:w-32  md:h-36 bg-gray-300 rounded-2xl p-1 md:p-2">
               <img
-                className="w-full h-full object-cover rounded-2xl"
+                className="w-full h-full object-cover rounded-xl"
                 src={image}
                 alt=""
               />
             </div>
-            <div className="space-y-2">
-              <div>
-                <h1 className="text-xl font-semibold">{title}</h1>
+            <div className="flex flex-1 flex-col md:flex-row md:justify-between md:items-center md:ml-14">
+              <div className="space-y-2 md:space-y-4">
+                <div>
+                  <h1 className="md:text-xl font-semibold">{title}</h1>
+                </div>
+                <div className="flex items-center gap-2 md:gap-12 text-gray-400">
+                  <div className="flex items-center gap-2">
+                    <img className="w-3 md:w-4 md:h-4 " src={downlowdIcon} alt="" />
+                    <div className="">
+                      <h1 className="text-xs md:text-[16px]">{downloads}</h1>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <img className="w-3 md:w-4 md:h-4" src={ratingsIcon} alt="" />
+                    <div className="">
+                      <h1 className="text-xs md:text-[16px]">{ratingAvg}</h1>
+                    </div>
+                  </div>
+                  <div className="flex flex-col">
+                    <p className="text-xs md:text-[16px]">{size} MB</p>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center gap-12 text-gray-400">
-                <div className="flex items-center gap-2">
-                  <img className="w-4 h-4 " src={downlowdIcon} alt="" />
-                  <div className="">
-                    <h1 className="">{downloads}</h1>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <img className="w-4 h-4" src={ratingsIcon} alt="" />
-                  <div iv className="">
-                    <h1 className="">{ratingAvg}</h1>
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <p>{size} MB</p>
-                </div>
+              <div className=" flex justify-start mt-3 md:mt-0">
+                <button onClick={() => handleUninstall(id)} className="btn h-7 md:h-10">
+                  Uninstall
+                </button>
               </div>
             </div>
-          </div>
-          <div>
-            <button onClick={()=>handleUninstall(id)} className="btn">Uninstall</button>
           </div>
         </div>
       </Container>
