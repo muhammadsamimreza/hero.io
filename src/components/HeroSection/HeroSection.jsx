@@ -18,7 +18,7 @@ const HeroSection = () => {
               </span>{" "}
               Apps
             </h1>
-            <p className="w-3/4 mx-auto text-gray-400 text-center">
+            <p className="w-[90%] md:w-3/4 mx-auto text-gray-400 text-center">
               At HERO.IO, we craft innovative apps designed to make everyday
               life simpler, smarter, and more exciting. Our goal is to turn your
               ideas into digital experiences that truly make an impact.
@@ -46,24 +46,24 @@ const HeroSection = () => {
             </h1>
             <div className="flex flex-col md:flex-row justify-around items-center space-y-7 md:space-y-0">
               <div className="flex justify-center ">
-                <div className="space-y-2 text-white pb-5 text-center">
-                  <p className="text-base-100">Total Downloads</p>
-                  <h1 className="text-xl md:text-3xl font-bold">29M</h1>
-                  <p className="text-base-100">21% more than last month</p>
+                <div className="space-y-1 md:space-y-2 text-white pb-5 text-center">
+                  <p className="text-sm md:text-[16px] text-[#ffffff90]">Total Downloads</p>
+                  <h1 className="text-2xl md:text-3xl font-bold">29M</h1>
+                  <p className="text-sm md:text-[16px] text-[#ffffff90]">21% more than last month</p>
                 </div>
               </div>
               <div className="flex justify-center ">
-                <div className="space-y-2 text-white pb-5 text-center">
-                  <p className="text-base-100">Total Reviews</p>
-                  <h1 className="text-xl md:text-3xl font-bold">906K</h1>
-                  <p className="text-base-100">46% more than last month</p>
+                <div className="space-y-1 md:space-y-2 text-white pb-5 text-center">
+                  <p className="text-sm md:text-[16px] text-[#ffffff90]">Total Reviews</p>
+                  <h1 className="text-2xl md:text-3xl font-bold">906K</h1>
+                  <p className="text-sm md:text-[16px] text-[#ffffff90]">46% more than last month</p>
                 </div>
               </div>
               <div className="flex justify-center ">
-                <div className="space-y-2 text-white pb-5 text-center">
-                  <p className="text-base-100">Active Apps</p>
-                  <h1 className="text-xl md:text-3xl font-bold">132+</h1>
-                  <p className="text-base-100">31 more will Launch</p>
+                <div className="space-y-1 md:space-y-2 text-white pb-5 text-center">
+                  <p className="text-sm md:text-[16px] text-[#ffffff90]">Active Apps</p>
+                  <h1 className="text-2xl md:text-3xl font-bold">132+</h1>
+                  <p className="text-sm md:text-[16px] text-[#ffffff90]">31 more will Launch</p>
                 </div>
               </div>
             </div>

@@ -67,16 +67,16 @@ const AppDetails = () => {
   return (
     <div>
       <Container>
-        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20 md:my-5 p-3 bg-base-200 rounded-2xl">
-          <div className="md:w-44 h-60 bg-gray-300 rounded-2xl">
+        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20 md:my-20 p-3 py-10 md:py-5 bg-base-300 rounded-2xl mt-10">
+          <div className="md:w-78 h-70 bg-gray-300 rounded-2xl">
             <img
-              className="w-full h-full object-cover rounded-2xl"
+              className="w-full h-full object-fit rounded-2xl"
               src={image}
               alt=""
             />
           </div>
-          <div className="space-y-3">
-            <div className="space-y-2 border-b border-gray-300 pb-5">
+          <div className="w-full space-y-3">
+            <div className="space-y-2 border-b-2  border-gray-300 pb-5">
               <h1 className="text-xl md:text-3xl font-bold">{title}</h1>
               <p className="md:text-xl ">
                 <span className="text-gray-400">Develop by:</span>
@@ -137,6 +137,7 @@ const AppDetails = () => {
         </div>
 
         <div className="my-20">
+          <h1 className="text-xl font-bold my-3">Ratings</h1>
           {
             <div className="w-full h-72 md:h-96 my-20">
               <ResponsiveContainer width="100%" height="100%">
@@ -166,7 +167,7 @@ const AppDetails = () => {
             </div>
           }
         </div>
-        <div>
+        <div className="pb-10">
           <h1 className="text-xl font-bold my-3">Description</h1>
           <p className="text-justify">{description}</p>
         </div>
