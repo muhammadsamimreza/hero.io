@@ -18,17 +18,23 @@ const Instalation = () => {
       savedAppLocal.map(Number).includes(app.id)
     );
 
-    setInstalledApp(filteredApp);
+    setInstalledApp(filteredApp); 
   }, [appData]);
 
   const handleSort = (type) => {
     setSort(type);
     let sortedApp = [...installedApp];
-    if (type === "size") {
-      sortedApp.sort((a, b) => a.size - b.size);
-    } else if (type === "rating") {
-      sortedApp.sort((a, b) => b.ratingAvg - a.ratingAvg);
-    }
+
+   const parseDownloads = (str) => {
+    if (str.endsWith("M")) return parseFloat(str) * 1_000_000;
+    return Number(str);
+  };
+
+  if (type === "Low-High") {
+    sortedApp.sort((a, b) => parseDownloads(a.downloads) - parseDownloads(b.downloads));
+  } else if (type === "High-Low") {
+    sortedApp.sort((a, b) => parseDownloads(b.downloads) - parseDownloads(a.downloads));
+  }
     setInstalledApp(sortedApp);
   };
   const handleUninstallApp = (id) => {
@@ -50,19 +56,19 @@ const Instalation = () => {
             </div>
             <div>
               <details className="dropdown">
-                <summary className="btn m-1 w-34">sort by: {sort} </summary>
-                <ul className="menu dropdown-content bg-base-100 rounded-box z-1 space-y-3 w-36 p-2 shadow-sm">
+                <summary className="btn m-1 w-40">sort by: {sort} </summary>
+                <ul className="menu dropdown-content bg-base-100 rounded-box z-1 space-y-3 w-42 p-2 shadow-sm">
                   <li
-                    onClick={() => handleSort("rating")}
+                    onClick={() => handleSort("High-Low")}
                     className="hover:cursor-pointer"
                   >
-                    Ratings
+                    High-Low
                   </li>
                   <li
-                    onClick={() => handleSort("size")}
+                    onClick={() => handleSort("Low-High")}
                     className="hover:cursor-pointer"
                   >
-                    Size
+                    Low-High
                   </li>
                 </ul>
               </details>
