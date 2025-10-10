@@ -10,9 +10,9 @@ const Loader = ({ inline = false }) => {
           : "fixed inset-0 flex justify-center items-center bg-white z-50"
       }
     >
-      <div className="flex h-30 gap-1 items-center text-7xl font-bold bg-[linear-gradient(125.07deg,_rgba(99,46,227,1),_rgba(159,98,242,1)_100%)] text-transparent bg-clip-text">
+      <div className="flex h-30 gap-1 items-center text-3xl md:text-7xl font-bold bg-[linear-gradient(125.07deg,_rgba(99,46,227,1),_rgba(159,98,242,1)_100%)] text-transparent bg-clip-text">
         L <span>
-          <img className="animate-spin w-18" src={logo} alt="" />
+          <img className="animate-spin w-8 md:w-18" src={logo} alt="" />
           </span> ading
       </div>
     </div>

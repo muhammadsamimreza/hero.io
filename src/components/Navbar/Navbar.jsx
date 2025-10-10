@@ -14,7 +14,7 @@ const Navbar = () => {
               <div
                 tabIndex={0}
                 role="button"
-                className="btn btn-ghost lg:hidden"
+                className="p-1 mr-2 rounded-lg bg-gray-100 lg:hidden"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -47,13 +47,13 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-1 md:gap-2 items-center">
               <img className="w-6 h-6" src={logo} alt="" />
               <Link
                 to="/"
                 className="text-xl font-bold bg-[linear-gradient(125.07deg,_rgba(99,46,227,1),_rgba(159,98,242,1)_100%)] text-transparent bg-clip-text "
               >
-                HERO.IO
+                AppGalaxy
               </Link>
             </div>
           </div>
