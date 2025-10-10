@@ -60,7 +60,7 @@ const Instalation = () => {
         isLoading && <Loader></Loader>
       }
       <Container className={`transition-opacity duration-500 ${isLoading ? "opacity-0" : "opacity-100"}`}>
-        <div className="md:py-10">
+        <div className="pb-8">
           <div className="text-center space-y-3 pt-5 md:py-10">
             <h1 className="text-xl sm:text-2xl md:text-3xl font-bold ">
               All Installed Apps
@@ -70,7 +70,7 @@ const Instalation = () => {
             </p>
           </div>
           <div>
-            <div className="my-3 md:my-8 px-3 flex justify-between items-center">
+            <div className="my-3 md:mb-8 px-3 flex justify-between items-center">
               <div className="md:text-xl font-semibold">
                 <p>Installed Apps ({installedApp.length})</p>
               </div>
