@@ -11,7 +11,7 @@ const AppErrorPage = () => {
             Oops, App not found!
           </h1>
           <p className="text-center">
-            The page you are looking for is not available.
+            The App you are looking for is not available.
           </p>
           <Link
             to="/"
