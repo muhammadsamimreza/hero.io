@@ -5,12 +5,12 @@ import ratingsIcon from "../assets/icon-ratings.png";
 import { deleteLocalStorage } from "../Utilities/AddToLocalStorage";
 import { toast } from "react-toastify";
 
-const InstalledCard = ({ app, onUninstall }) => {
+const InstalledCard = ({ app, handleUninstallApp }) => {
   console.log(app);
 
   const { title, image, ratingAvg, downloads, size, id } = app;
   const handleUninstall = (id) => {
-    onUninstall(id);
+    handleUninstallApp(id);
     deleteLocalStorage(id);
     toast(<h1 className="text-red-400">Succesfully Uninstalled</h1>);
   };

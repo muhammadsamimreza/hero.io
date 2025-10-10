@@ -1,8 +1,8 @@
 import React from "react";
 import useAppData from "../Hooks/useAppData";
-import Container from "../components/Container/Container";
 import AppCard from "../components/AppCard/AppCard";
 import { Link } from "react-router";
+import { FaArrowTrendUp } from "react-icons/fa6";
 
 const TrendingApps = () => {
   const { appData } = useAppData();
@@ -12,7 +12,7 @@ const TrendingApps = () => {
     <div>
       <div className="">
         <div className="text-center space-y-3 py-10">
-          <h1 className="text-3xl font-bold ">TrendingApps</h1>
+          <h1 className="text-3xl font-bold flex items-center gap-2 justify-center"><span>Trending Apps</span> <span><FaArrowTrendUp /></span></h1>
           <p className="text-[#627382]">
             Explore All Trending Apps on the Market developed by us
           </p>

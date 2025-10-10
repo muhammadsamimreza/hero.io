@@ -22,6 +22,7 @@ import {
 } from "../Utilities/AddToLocalStorage";
 import AppErrorPage from "../pages/AppErrorPage";
 import { toast } from "react-toastify";
+import Loader from "./Loading";
 
 const AppDetails = () => {
   const { id } = useParams();
@@ -37,7 +38,7 @@ const AppDetails = () => {
   if (!appData || appData.length === 0) {
     return (
       <div className="text-center py-20">
-        <h1 className="text-xl font-semibold text-gray-500">Loading...</h1>
+        <Loader></Loader>
       </div>
     );
   }
@@ -126,11 +127,10 @@ const AppDetails = () => {
                 className={`btn font-semibold ${
                   installed
                     ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-teal-400 text-white"
+                    : "bg-[linear-gradient(125.07deg,_rgba(99,46,227,1),_rgba(159,98,242,1)_100%)] text-white"
                 }`}
               >
-                {installed ? "Installed" : "Install Now"}{" "}
-                <span>({size} MB)</span>
+                {installed ? "Installed" : `Install Now (${size} MB)`}{" "}
               </button>
             </div>
           </div>

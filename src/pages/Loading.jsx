@@ -1,11 +1,21 @@
-import React from 'react'
+import React from "react";
+import logo from "../assets/logo.png"
 
-const Loader = () => {
+const Loader = ({ inline = false }) => {
   return (
-   <div className="fixed inset-0 flex justify-center items-center bg-white z-50">
-  <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-</div>
-
+    <div
+      className={
+        inline
+          ? "flex justify-center items-center"
+          : "fixed inset-0 flex justify-center items-center bg-white z-50"
+      }
+    >
+      <div className="flex h-30 gap-1 items-center text-7xl font-bold bg-[linear-gradient(125.07deg,_rgba(99,46,227,1),_rgba(159,98,242,1)_100%)] text-transparent bg-clip-text">
+        L <span>
+          <img className="animate-spin w-18" src={logo} alt="" />
+          </span> ading
+      </div>
+    </div>
   );
 };
 

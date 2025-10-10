@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import TrendingApps from "./TrendingApps";
 import Container from "../components/Container/Container";
-import AppCard from "../components/AppCard/AppCard";
 import HeroSection from "../components/HeroSection/HeroSection";
 import Loader from "./Loading";
 
@@ -11,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     const time = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 300);
     return () => clearTimeout(time);
   }, []);
   return (

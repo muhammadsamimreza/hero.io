@@ -14,7 +14,7 @@ const Instalation = () => {
   useEffect(() => {
     const time = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 300);
     return () => clearTimeout(time);
   }, []);
 
@@ -101,7 +101,7 @@ const Instalation = () => {
             <InstalledCard
               key={app.id}
               app={app}
-              onUninstall={handleUninstallApp}
+              handleUninstallApp={handleUninstallApp}
             ></InstalledCard>
           ))}
         </div>
