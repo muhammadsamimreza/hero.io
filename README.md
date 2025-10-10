@@ -14,12 +14,21 @@
 
 ## Technology :-
 
-**Programming Language** --> JavaScript
-**Frontend Framework** --> React
-**Routing** --> React Router
-**UI Framework & Styling** --> Tailwind CSS, DaisyUI
-**Icons** --> React Icons
-**Charts & Visualization** --> Recharts
-**HTTP Requests** --> Axios
-**Markup & Structure** --> HTML, JSX
-**Custom Logic** --> React Hooks (`useAppData`)
+   # Programming Language 
+    -->  JavaScript
+   # Frontend Framework 
+    --> React
+   # Routing 
+    --> React Router
+   # UI Framework & Styling 
+    --> Tailwind CSS, DaisyUI
+   # Icons
+    --> React Icons
+   # Charts & Visualization 
+    --> Recharts
+   # HTTP Requests 
+    --> Axios
+   # Markup & Structure 
+    --> HTML, JSX
+   # Custom Logic 
+    --> React Hooks (`useAppData`)
