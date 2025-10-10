@@ -92,7 +92,7 @@ const AllApp = () => {
           <Loader inline></Loader>
           : fillteredApp.length === 0 ? (
             <div className="flex flex-col space-y-7 justify-center text-gray-500 py-20 text-xl font-semibold">
-              <h1 className="w-64 mx-auto text-2xl text-center">No App Found</h1>
+              <h1 className="w-64 mx-auto text-2xl md:text-3xl text-center">No App Found</h1>
               
               <Link
             to="/"
