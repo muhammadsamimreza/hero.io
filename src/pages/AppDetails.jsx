@@ -57,7 +57,7 @@ const AppDetails = () => {
     description,
     size,
   } = data;
-  const chartData = data.ratings;
+  const chartData = [...data.ratings].reverse();
 
   const handleInstall = () => {
     addToLocalStorage(appId);
