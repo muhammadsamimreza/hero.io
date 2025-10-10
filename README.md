@@ -1,16 +1,25 @@
-# React + Vite
+# Name: AppGalaxy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### ----->> JavaScript - React JS - Html - CSS  <<---- ####
 
-Currently, two official plugins are available:
+# Description:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    AppGalaxy is a web application. It is interactive and user friendly. It's made by easy functionality sothat user can easily find their nesscesary app and use it properly. This App brings together a collection of various apps in one place. Users can easily search, filter, install, and uninstall apps with  smoothly.
 
-## React Compiler
+    It's Built with modern web technologies. This App combines speed, interactivity, and proper design to create a user experience that feels both smooth and dynamic.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+    The app focuses on user friendly — featuring quick data fetching with Axios. Use loading spinner if dat is taiking a few time for data fething. Also it provide clean and responsive layouts with Tailwind CSS and DaisyUI, and interactive visual elements like charts to use Recharts.
 
-## Expanding the ESLint configuration
+    In a word , AppGalaxy was created to offer users a smart and modern platform where they can discover and manage different categories of apps all in one place — simple, stylish, and Gorgeous.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technology :-
+
+**Programming Language** --> JavaScript
+**Frontend Framework** --> React
+**Routing** --> React Router
+**UI Framework & Styling** --> Tailwind CSS, DaisyUI
+**Icons** --> React Icons |
+**Charts & Visualization** --> Recharts
+**HTTP Requests** --> Axios
+**Markup & Structure** --> HTML, JSX
+**Custom Logic** --> React Hooks (`useAppData`)
