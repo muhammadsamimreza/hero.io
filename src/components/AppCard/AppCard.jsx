@@ -4,7 +4,7 @@ import downloadImg from "../../assets/icon-downloads.png"
 import ratingsImg from "../../assets/icon-ratings.png"
 
 
-const AppCard = ({app}) => {
+const AppCard = ({app}) => { 
   const { title,ratingAvg,downloads, image,id } = app;
   return (
     <Link to={`/appdetails/${id}`}>
