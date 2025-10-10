@@ -18,7 +18,7 @@
 **Frontend Framework** --> React
 **Routing** --> React Router
 **UI Framework & Styling** --> Tailwind CSS, DaisyUI
-**Icons** --> React Icons |
+**Icons** --> React Icons
 **Charts & Visualization** --> Recharts
 **HTTP Requests** --> Axios
 **Markup & Structure** --> HTML, JSX
